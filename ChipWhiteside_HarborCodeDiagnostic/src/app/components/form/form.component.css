@@ -1,5 +1,3 @@
-
-
 .input-grid {
     display: grid;
     height: 100%;
@@ -12,14 +10,6 @@
     margin: 5px;
 }
 
-/* .input:hover {
-    transform: scale(1.1);
-}
-
-.input:focus {
-    transform: scale(1.2);
-} */
-
 .input-grid > .input.wide {
     grid-column: span 2;
 }
@@ -31,7 +21,6 @@
     display: flex;
     margin-left: 10px;
 }
-
 
 .input-box {
     width: 100%;
@@ -59,35 +48,52 @@
     color: white;
 }
 
-
-
 input::placeholder {
-    color: grey;/* rgb(0, 0, 0, .5);*/
+    color: grey;
 }
 
 input:focus::placeholder {
-    color: white;/* rgb(0, 0, 0, .5);*/
+    color: white;
 }
 
+.question-holder {
+    display: flex;
+}
+
+.question-holder:hover > .question-mark {
+    animation: question 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.question-mark {
+    position: absolute;
+    transform: scale(0);
+}
 
 .input-box.req {
-    /* border-left: 3px solid rgb(230, 60, 60); */
     box-shadow: -3px 0px 0px 0px rgb(230, 60, 60, 1);
 
     animation: fade 1s;
+}
+
+@keyframes question {
+    from {
+        transform: scale(0) rotate(0deg) translate(0, 0);
+    }
+    to {
+        transform: scale(0) rotate(0deg) translate(0, 0);
+    }
+    50% {
+        transform: scale(2) rotate(-45deg) translate(-25px, -50px);
+    }
 }
 
 @keyframes fade {
     from {
         outline: 3px solid rgb(230, 60, 60, 1);    
         box-shadow: -3px 0px 0px 0px rgb(230, 60, 60);
-        /* border: 3px solid rgb(230, 60, 60);    
-        border-left: 3px solid rgb(230, 60, 60); */
     }
     to {
         outline: 3px solid rgb(230, 60, 60, 0);    
         box-shadow: -3px 0px 0px 0px rgb(230, 60, 60);
-        /* border: 3px solid rgb(230, 60, 60, 0);
-        border-left: 3px solid rgb(230, 60, 60); */
     }
 }

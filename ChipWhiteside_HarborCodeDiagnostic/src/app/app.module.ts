@@ -8,7 +8,6 @@ import { ButtonComponent } from './components/button/button.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { FormComponent } from './components/form/form.component';
 import { DescriptionComponent } from './components/description/description.component';
-// import { BubblesComponent } from './components/bubbles/bubbles.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { DescriptionComponent } from './components/description/description.compo
     PopupComponent,
     FormComponent,
     DescriptionComponent,
-    // BubblesComponent
   ],
   imports: [
     BrowserModule,
