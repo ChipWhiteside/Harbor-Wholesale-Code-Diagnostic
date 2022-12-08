@@ -12,64 +12,6 @@ body {
   height: 100%;
 }
 
-.mainContainer {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: center;
-    border: 2px solid steelblue;
-    cursor: crosshair;
-}
-.styledContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-    padding: 30px;
-    max-width: 1350px;
-}
-
-.descriptionContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 30px;
-  width: 40%;
-  overflow: auto;
-  min-height: 300px;
-  padding: 30px;
-  border-radius: 5px;
-}
-
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-  width: 60%;
-  overflow: auto;
-  min-height: 300px;
-  padding: 30px;
-  border-radius: 5px;
-}
-
-.popup {
-  display: none; 
-  justify-content: center;
-  align-items: center;
-  position: fixed; 
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.2); 
-}
-
 .title {
     font-size: xx-large;
     font-weight: 400;

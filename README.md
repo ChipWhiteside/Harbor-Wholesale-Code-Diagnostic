@@ -12,6 +12,6 @@ Instructions:<br />
 To start project:<br />
 Path to directory: '../Harbor-Wholesale-Code-Diagnostic/ChipWhiteside_HarborCodeDiagnostic'<br />
 Run command: 'ng serve' <br />
-    (This sets the project to run on localhost:4200)<br />
+    (This runs the project on localhost:4200)<br />
 Run command: 'npm run server' <br />
     (This sets the local json server to run on localhost:5000, you can alter the port the server runs on by altering line 10 of package.json is root folder)<br />
