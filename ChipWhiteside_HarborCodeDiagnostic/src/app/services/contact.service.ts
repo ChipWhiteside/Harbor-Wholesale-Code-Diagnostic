@@ -17,10 +17,16 @@ export class ContactService {
 
   constructor(private http:HttpClient) { }
 
+  /*
+  * Gets the saved contact in the json server
+  */
   getContact(): Observable<Contact> {
     return this.http.get<Contact>(this.apiUrl);
   }
 
+  /*
+  * Updates the saved contact on the json server with a post request
+  */
   saveContact(contact: Contact): Observable<Contact> {
     return this.http.post<Contact>(this.apiUrl, contact, httpOptions);
   }

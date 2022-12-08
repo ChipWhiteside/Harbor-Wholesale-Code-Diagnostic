@@ -39,10 +39,13 @@ export class FormComponent implements OnInit {
       formattedPhoneNumber = formattedPhoneNumber.concat(this.phoneNumber[i]);
     }
     this.phoneNumber = formattedPhoneNumber;
-
   }
 
-  // TODO: Use extraction to simplify this repetition
+  /*
+  * On submit button pressed, verify all fields are filled out manually and if not apply the required animation to the input box. 
+  * If all required information is provided, emit the onSave event which tells the app.component to save the contact provided
+  * TODO: Use extraction to simplify this repetition
+  */
   onSubmit() {
     let goodToSubmit = true;
     document.getElementById("name")?.classList.remove("req");
@@ -77,6 +80,7 @@ export class FormComponent implements OnInit {
     }
 
     if (goodToSubmit) {
+      // Create new contact to be saved
       const newContactToSave: Contact = {
         name: this.name,
         email: this.email,
@@ -86,9 +90,10 @@ export class FormComponent implements OnInit {
         dateTimeReachedOut: Date.now().toString() // TODO: convert to UTC before saving
       }
 
-      // Emit save event
+      // Emit save event with newly created contact
       this.onSave.emit(newContactToSave);
 
+      // Reset input field values for cleaner look in the background & to 'refresh' the page 
       this.name = '';
       this.email = '';
       this.phoneNumber = '';

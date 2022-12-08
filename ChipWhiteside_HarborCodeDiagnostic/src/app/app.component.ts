@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { delay } from 'rxjs';
 import { Contact } from './Contact';
 import { ContactService } from './services/contact.service';
 
@@ -14,27 +15,31 @@ export class AppComponent {
 
   ngOnInit() {
     this.contactService.getContact().subscribe((contactGot) => (this.contact = contactGot));
-    console.log("Contact: " + this.contact);
   }
 
+  /*
+  * Uses the contact service to save the contact passed from the form component then opens the modal to display the information back to the user
+  */
   SaveContact(contact: Contact) {
-    this.OpenModal();
     this.contactService.saveContact(contact).subscribe((contactGot) => (this.contact = contactGot));
-
-    console.log("Contact: " + contact!);
+    this.OpenModal();
   }
 
+  /*
+  * Closes the popup modal by finding the element and settings it's display value to 'none' from 'flex'
+  */
   CloseModal() {
     const modal = document.getElementById("popupModal");
-    console.log("modal close: " + modal);
     if (modal) {
       modal.style.display = "none";
       modal.classList.remove("opened");
     }
-
     this.ResetContactValues()
   }
 
+  /*
+  * Opens the popup modal by finding the element and settings it's display value to 'flex' from 'none'
+  */
   OpenModal() {
     const modal = document.getElementById("popupModal");
     if (modal) {
@@ -43,6 +48,9 @@ export class AppComponent {
     }
   }
 
+  /*
+  * Clears the content of the current Contact so previous information doesn't stay around after it's been saved
+  */
   ResetContactValues() {
     this.contact.name = '';
     this.contact.email = '';
@@ -52,3 +60,4 @@ export class AppComponent {
   }
 
 }
+
