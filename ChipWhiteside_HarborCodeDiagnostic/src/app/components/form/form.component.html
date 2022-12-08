@@ -1,0 +1,29 @@
+<h2 class="subtitle">How can we help?</h2>
+
+<form class="input-grid" (ngSubmit)="onSubmit()">
+    <div class="input wide req"> 
+        <!-- <app-form-input placeholderText="Name" [field]=contact!.name></app-form-input> -->
+        <input id="name" name="name" class="input-box" type="text" placeholder="Name" [(ngModel)]="name">
+    </div>  
+    <div class="input"> 
+        <!-- <app-form-input placeholderText="Email"></app-form-input> -->
+        <input id="email" name="email" class="input-box" type="text" placeholder="Email" [(ngModel)]="email">
+    </div>  
+    <div class="input"> 
+        <!-- <app-form-input placeholderText="Phone Number"></app-form-input> -->
+        <input id="phoneNumber" name="phoneNumber" class="input-box" type="text" placeholder="Phone Number" [(ngModel)]="phoneNumber" (input)="FormatPhoneNumber()" maxlength="14">
+
+    </div>  
+    <div class="input"> 
+        <!-- <app-form-input placeholderText="Company Name"></app-form-input> -->
+        <input id="companyName" name="companyName" class="input-box" type="text" placeholder="Company Name" [(ngModel)]="companyName">
+        
+    </div>  
+    <div class="input"> 
+        <!-- <app-form-input placeholderText="Type of Business"></app-form-input> -->
+        <input id="typeOfBusiness" name="typeOfBusiness" class="input-box" type="text" placeholder="Type of Business" [(ngModel)]="typeOfBusiness">
+
+    </div>  
+    <app-button type="submit" class="button" color="steelblue" text="GET IN TOUCH"></app-button>
+</form>
+

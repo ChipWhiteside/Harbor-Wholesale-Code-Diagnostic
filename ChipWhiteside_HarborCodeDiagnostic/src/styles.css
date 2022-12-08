@@ -1,0 +1,188 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    border: 2px solid steelblue;
+}
+.styledContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 30px;
+    max-width: 1350px;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+  width: 40%;
+  overflow: auto;
+  min-height: 300px;
+  /* border: 1px solid #5a6b78; */
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  width: 60%;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.popup {
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.2); 
+}
+
+
+
+
+.title {
+    font-size: xx-large;
+    font-weight: 400;
+    color: steelblue;
+    margin: 10px 0;
+}
+.subtitle {
+    font-size: large;
+    font-weight: 600;
+    color: steelblue;
+    margin: 25px 0;
+}
+.subtitle_grey {
+  font-size: medium;
+  color: grey;
+  font-weight: 100;
+}
+.text-TimesNewRoman {
+  font-size: small;
+  font-weight: 100;
+  color: grey;
+  font-family: initial;
+}
+.text {
+    font-size: small;
+}
+    .text.blue{
+        color: steelblue;
+    }
+    .text.grey{
+        color: grey;
+    }
+.bullet {
+    font-size: small;
+    font-weight: 600;
+    color: steelblue;
+}
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: steelblue;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.textRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+    .textRow .holder{
+        margin: 0 8px 0 0;
+    }
+
+.btn {
+    display: inline-block;
+    background: steelblue;
+    color: #fff;
+    border: none;
+    padding: 12px 50px;
+    margin: 25px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: xx-small;
+    font-weight: 600;
+    font-family: inherit;
+}
+.btn:hover{
+  transform: scale(1.025);
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}

@@ -1,0 +1,8 @@
+<div class="mainContainer">
+  <div class="styledContainer">
+    <app-description class="descriptionContainer"></app-description>
+    <app-form class="formContainer" [contact]="contact" (onSave)="SaveContact($event)"></app-form>
+    <app-popup id="popupModal" class="popup" [contactToDisplay]="contact" (click)="CloseModal()"></app-popup>
+  </div>
+</div>
+<!-- <app-bubbles></app-bubbles> -->
