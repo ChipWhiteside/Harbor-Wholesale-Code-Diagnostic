@@ -15,3 +15,4 @@ Run command: 'ng serve' <br />
     (This runs the project on localhost:4200)<br />
 Run command: 'npm run server' <br />
     (This sets the local json server to run on localhost:5000, you can alter the port the server runs on by altering line 10 of package.json is root folder)<br />
+    You can navigate to 'http://localhost:5000/contact' in your browser to see the json server's contents
